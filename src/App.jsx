@@ -1,5 +1,6 @@
+import Description from "./components/Description";
 import NavBar from "./components/NavBar";
-import SliderMobile from "./components/SliderMobile";
+import Sliders from "./components/Sliders";
 import { useMediaQuery } from "@uidotdev/usehooks";
 
 export default function App() {
@@ -7,7 +8,8 @@ export default function App() {
   return (
     <div>
       <NavBar isMobile={isSmallDevice} />
-      <SliderMobile isMobile={isSmallDevice} />
+      <Sliders isMobile={isSmallDevice} />
+      <Description />
     </div>
   );
 }

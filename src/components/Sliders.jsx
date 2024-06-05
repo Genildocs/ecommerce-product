@@ -9,7 +9,7 @@ import image_2 from "../assets/images/image-product-2.jpg";
 import image_3 from "../assets/images/image-product-3.jpg";
 import image_4 from "../assets/images/image-product-4.jpg";
 
-export default function SliderMobile({ isMobile }) {
+export default function Sliders({ isMobile }) {
   return (
     <div>
       {isMobile && (
