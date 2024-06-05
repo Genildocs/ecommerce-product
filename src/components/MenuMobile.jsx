@@ -1,9 +1,19 @@
+import { motion } from "framer-motion";
 export default function MenuMobile({ isOpen }) {
+  const menu = {
+    open: { x: 0, transition: { duration: 0.5 } },
+    closed: { x: -100, transition: { duration: 0.5 } },
+  };
   return (
     <>
       {isOpen && (
-        <div className="absolute top-0  left-0 bg-black min-h-screen w-[50vw] transition-all duration-500  md:hidden">
-          <ul className="absolute top-[10%] left-5 flex flex-col items-center gap-8 text-white">
+        <motion.div
+          className="absolute top-0  left-0 bg-black min-h-screen w-[50vw]  md:hidden"
+          initial="closed"
+          animate={isOpen ? "open" : "closed"}
+          variants={menu}
+        >
+          <motion.ul className="absolute top-[10%] left-5 flex flex-col items-center gap-8 text-white">
             <li>
               <a href="#">Collections</a>
             </li>
@@ -19,8 +29,8 @@ export default function MenuMobile({ isOpen }) {
             <li>
               <a href="#">Contact</a>
             </li>
-          </ul>
-        </div>
+          </motion.ul>
+        </motion.div>
       )}
     </>
   );
