@@ -1,10 +1,24 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+/*  */
+
 /* Syncfusion */
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
-/*  */
 
+.e-indicator-bars {
+  display: none !important;
+}
+
+.e-btn {
+  background: white !important;
+}
+
+.e-btn-icon {
+  color: black !important;
+}
+/*  */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -8,7 +8,7 @@ export default function MenuMobile({ isOpen }) {
     <>
       {isOpen && (
         <motion.div
-          className="absolute top-0  left-0 bg-black min-h-screen w-[50vw]  md:hidden"
+          className="absolute top-0  left-[-32px] bg-black min-h-screen w-[50vw] z-40 md:hidden"
           initial="closed"
           animate={isOpen ? "open" : "closed"}
           variants={menu}

@@ -4,21 +4,19 @@ import Avatar from "../assets/images/image-avatar.png";
 import Menu from "../assets/images/icon-menu.svg";
 import iconClose from "../assets/images/icon-close.svg";
 import MenuMobile from "./MenuMobile";
-import { useMediaQuery } from "@uidotdev/usehooks";
 import { useState } from "react";
-export default function NavBar() {
-  const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
+export default function NavBar({ isMobile }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleIsOpen = () => {
     setIsOpen((prev) => !prev);
-    if (isSmallDevice) {
+    if (isMobile) {
       document.body.classList.toggle("overflow-hidden");
     }
   };
 
   return (
-    <nav className="h-[10vh] md:h-[15vh] flex items-center justify-between px-8 md:px-16 lg:px-32 2xl:px-64 md:border-nav relative">
+    <nav className="h-[10vh] md:h-[15vh] flex items-center justify-between mx-8 md:mx-16 lg:mx-32 2xl:mx-64 md:border-nav relative">
       <section className="flex items-center gap-2 ">
         <button className="z-50 md:hidden" onClick={handleIsOpen}>
           {isOpen ? (
