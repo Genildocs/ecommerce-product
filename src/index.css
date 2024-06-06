@@ -1,11 +1,12 @@
 /* font */
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
 /*  */
 
 /* Syncfusion */
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-react-popups/styles/material.css';
 
 .e-indicator-bars {
   display: none !important;
@@ -25,7 +26,7 @@
 
 @layer base {
   body {
-    font-family: "Kumbh Sans", sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
     min-height: 100vh;
   }
 }

@@ -1,17 +1,18 @@
-import Logo from "../assets/images/logo.svg";
-import Cart from "../assets/images/icon-cart.svg";
-import Avatar from "../assets/images/image-avatar.png";
-import Menu from "../assets/images/icon-menu.svg";
-import iconClose from "../assets/images/icon-close.svg";
-import MenuMobile from "./MenuMobile";
-import { useState } from "react";
-export default function NavBar({ isMobile }) {
+import Logo from '../assets/images/logo.svg';
+import Cart from '../assets/images/icon-cart.svg';
+import Avatar from '../assets/images/image-avatar.png';
+import Menu from '../assets/images/icon-menu.svg';
+import iconClose from '../assets/images/icon-close.svg';
+import MenuMobile from './MenuMobile';
+import { useState } from 'react';
+import CartModal from './CartModal';
+export default function NavBar({ isMobile, setModal }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleIsOpen = () => {
     setIsOpen((prev) => !prev);
     if (isMobile) {
-      document.body.classList.toggle("overflow-hidden");
+      document.body.classList.toggle('overflow-hidden');
     }
   };
 
@@ -49,8 +50,14 @@ export default function NavBar({ isMobile }) {
           </ul>
         </div>
       </section>
-      <section className="flex items-center gap-3 md:gap-6">
-        <img src={Cart} alt="cart" className="cursor-pointer" />
+      <section className="flex items-center gap-3 md:gap-6 relative">
+        <img
+          src={Cart}
+          alt="cart"
+          className="cursor-pointer"
+          onClick={() => setModal((prev) => !prev)}
+        />
+
         <img
           src={Avatar}
           alt="avatar"
