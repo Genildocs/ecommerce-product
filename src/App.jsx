@@ -7,12 +7,13 @@ import { useMediaQuery } from '@uidotdev/usehooks';
 export default function App() {
   const isSmallDevice = useMediaQuery('only screen and (max-width : 768px)');
   const [modalOpen, setModalOpen] = useState(false);
+  const [count, setCount] = useState(0);
 
   return (
     <div>
-      <NavBar isMobile={isSmallDevice} setModal={setModalOpen} />
+      <NavBar isMobile={isSmallDevice} setModal={setModalOpen} count={count} />
       <Sliders isMobile={isSmallDevice} />
-      <Description isModal={modalOpen} />
+      <Description isModal={modalOpen} count={count} setCount={setCount} />
     </div>
   );
 }

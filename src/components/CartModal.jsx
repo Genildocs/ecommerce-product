@@ -1,6 +1,6 @@
 import product_1 from '../assets/images/image-product-1.jpg';
 import iconDelete from '../assets/images/icon-delete.svg';
-export default function CartModal({ modal, count, countValue }) {
+export default function CartModal({ modal, count, countValue, removeCart }) {
   return (
     <>
       {modal && (
@@ -23,13 +23,15 @@ export default function CartModal({ modal, count, countValue }) {
                   <p>${countValue}</p>
                 </div>
                 <div>
-                  <button>
+                  <button onClick={removeCart}>
                     <img src={iconDelete} alt="" />
                   </button>
                 </div>
               </div>
-              <div>
-                <button>Checkout</button>
+              <div className="mt-5">
+                <button className="bg-orange-500 w-full p-2 rounded-md font-bold">
+                  Checkout
+                </button>
               </div>
             </div>
           ) : (

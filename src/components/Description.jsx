@@ -1,10 +1,9 @@
 import iconPlus from '../assets/images/icon-plus.svg';
 import iconMenus from '../assets/images/icon-minus.svg';
 import iconCart from '../assets/images/icon-cart.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CartModal from './CartModal';
-export default function Description({ isModal }) {
-  const [count, setCount] = useState(0);
+export default function Description({ isModal, count, setCount }) {
   const [cartValue, setCartValue] = useState(0);
 
   const increment = () => {
@@ -17,9 +16,22 @@ export default function Description({ isModal }) {
     }
   };
 
+  const removeFromCart = () => {
+    setCount(0);
+    setCartValue(0);
+  };
+
   const addToCart = () => {
     setCartValue(count * 125);
   };
+
+  useEffect(() => {
+    const addToCart = () => {
+      setCartValue(count * 125);
+    };
+
+    addToCart();
+  }, [count]);
 
   return (
     <div className="px-8 md:px-0  md:mx-16 lg:mx-32 2xl:mx-64">
@@ -59,7 +71,12 @@ export default function Description({ isModal }) {
         </button>
       </div>
 
-      <CartModal modal={isModal} count={count} countValue={cartValue} />
+      <CartModal
+        modal={isModal}
+        count={count}
+        countValue={cartValue}
+        removeCart={removeFromCart}
+      />
     </div>
   );
 }

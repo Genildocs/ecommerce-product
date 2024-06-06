@@ -6,7 +6,7 @@ import iconClose from '../assets/images/icon-close.svg';
 import MenuMobile from './MenuMobile';
 import { useState } from 'react';
 import CartModal from './CartModal';
-export default function NavBar({ isMobile, setModal }) {
+export default function NavBar({ isMobile, setModal, count }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleIsOpen = () => {
@@ -57,7 +57,11 @@ export default function NavBar({ isMobile, setModal }) {
           className="cursor-pointer"
           onClick={() => setModal((prev) => !prev)}
         />
-
+        {count > 0 && (
+          <div className="absolute top-[-10px] left-[-10px] bg-red-500 text-white w-[20px] h-[20px] rounded-full flex items-center justify-center">
+            <p className="font-bold">{count}</p>
+          </div>
+        )}
         <img
           src={Avatar}
           alt="avatar"
