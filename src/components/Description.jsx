@@ -34,7 +34,7 @@ export default function Description({ isModal, count, setCount }) {
   }, [count]);
 
   return (
-    <div className="px-8 md:px-0  md:mx-16 lg:mx-32 2xl:mx-64">
+    <div className="px-8 md:px-0  md:mx-16 lg:mx-32 2xl:mx-64 md:flex-1 ">
       <span className="uppercase text-gray-500 text-sm font-semibold ">
         sneaker company
       </span>
