@@ -4,7 +4,10 @@ export default function CartModal({ modal, count, countValue, removeCart }) {
   return (
     <>
       {modal && (
-        <div className="bg-white w-[90%] h-[30%]  fixed top-[15%] left-0  z-50 mx-4 p-5 rounded-md">
+        <div
+          className={`${
+            count <= 0 ? ' h-[30%] ' : ''
+          } bg-white w-[90%]  fixed top-[15%] left-0  z-50 mx-4 p-5 rounded-md`}>
           <div className="mb-5">
             <h2 className="font-bold ">Cart</h2>
           </div>
@@ -35,7 +38,7 @@ export default function CartModal({ modal, count, countValue, removeCart }) {
               </div>
             </div>
           ) : (
-            <div className="flex items-center justify-center h-full">
+            <div className="flex items-center justify-center ">
               <p className="font-bold">Empty Cart</p>
             </div>
           )}

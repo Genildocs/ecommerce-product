@@ -2,12 +2,12 @@ import {
   CarouselComponent,
   CarouselItemsDirective,
   CarouselItemDirective,
-} from "@syncfusion/ej2-react-navigations";
-import * as React from "react";
-import image_1 from "../assets/images/image-product-1.jpg";
-import image_2 from "../assets/images/image-product-2.jpg";
-import image_3 from "../assets/images/image-product-3.jpg";
-import image_4 from "../assets/images/image-product-4.jpg";
+} from '@syncfusion/ej2-react-navigations';
+import * as React from 'react';
+// import image_1 from '../assets/images/image-product-1.jpg';
+// import image_2 from '../assets/images/image-product-2.jpg';
+// import image_3 from '../assets/images/image-product-3.jpg';
+// import image_4 from '../assets/images/image-product-4.jpg';
 
 export default function Sliders({ isMobile }) {
   return (
@@ -15,7 +15,13 @@ export default function Sliders({ isMobile }) {
       {isMobile && (
         <CarouselComponent>
           <CarouselItemsDirective>
-            <CarouselItemDirective
+            {[1, 2, 3, 4].map((idx) => (
+              <CarouselItemDirective
+                key={idx}
+                template={`'<figure class="img-container"><img src='src/assets/images/image-product-${idx}.jpg' alt="cardinal" style="height:100%;width:100%;" /></figure>'`}
+              />
+            ))}
+            {/* <CarouselItemDirective
               template={`'<figure class="img-container"><img src=${image_1} alt="cardinal" style="height:100%;width:100%;" /></figure>'`}
             />
             <CarouselItemDirective
@@ -26,7 +32,7 @@ export default function Sliders({ isMobile }) {
             />
             <CarouselItemDirective
               template={`'<figure class="img-container"><img src=${image_4} alt="cardinal" style="height:100%;width:100%;" /></figure>'`}
-            />
+            /> */}
           </CarouselItemsDirective>
         </CarouselComponent>
       )}
