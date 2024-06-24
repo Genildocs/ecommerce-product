@@ -16,9 +16,21 @@
   background: white !important;
 }
 
+@media (min-width: 768px) {
+  .e-btn {
+    display: none !important;
+  }
+
+  .e-carousel.e-partial .e-carousel-slide-container {
+    padding: 0 150px !important;
+    border-radius: 10px !important;
+  }
+}
+
 .e-btn-icon {
   color: black !important;
 }
+
 /*  */
 @tailwind base;
 @tailwind components;

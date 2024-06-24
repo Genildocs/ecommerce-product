@@ -14,7 +14,7 @@ const images = [image_1, image_2, image_3, image_4];
 export default function Sliders({ isMobile }) {
   return (
     <div>
-      {isMobile && (
+      {isMobile ? (
         <CarouselComponent>
           <CarouselItemsDirective>
             {images.map((img, idx) => (
@@ -23,18 +23,17 @@ export default function Sliders({ isMobile }) {
                 template={`'<figure class="img-container"><img src=${img} alt="cardinal" style="height:100%;width:100%;" /></figure>'`}
               />
             ))}
-            {/* <CarouselItemDirective
-              template={`'<figure class="img-container"><img src=${image_1} alt="cardinal" style="height:100%;width:100%;" /></figure>'`}
-            />
-            <CarouselItemDirective
-              template={`'<figure class="img-container"><img src=${image_2} alt="cardinal" style="height:100%;width:100%;" /></figure>'`}
-            />
-            <CarouselItemDirective
-              template={`'<figure class="img-container"><img src=${image_3} alt="cardinal" style="height:100%;width:100%;" /></figure>'`}
-            />
-            <CarouselItemDirective
-              template={`'<figure class="img-container"><img src=${image_4} alt="cardinal" style="height:100%;width:100%;" /></figure>'`}
-            /> */}
+          </CarouselItemsDirective>
+        </CarouselComponent>
+      ) : (
+        <CarouselComponent>
+          <CarouselItemsDirective>
+            {images.map((img, idx) => (
+              <CarouselItemDirective
+                key={idx}
+                template={`'<figure class="img-container "><img src=${img} alt="cardinal" style="height:100%;width:100%;" /></figure>'`}
+              />
+            ))}
           </CarouselItemsDirective>
         </CarouselComponent>
       )}
