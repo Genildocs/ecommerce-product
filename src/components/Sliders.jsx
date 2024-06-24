@@ -20,7 +20,7 @@ export default function Sliders({ isMobile }) {
             {images.map((img, idx) => (
               <CarouselItemDirective
                 key={idx}
-                template={`'<figure class="img-container"><img src=${img.image_1} alt="cardinal" style="height:100%;width:100%;" /></figure>'`}
+                template={`'<figure class="img-container"><img src=${image_1} alt="cardinal" style="height:100%;width:100%;" /></figure>'`}
               />
             ))}
             {/* <CarouselItemDirective
