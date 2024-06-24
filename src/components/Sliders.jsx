@@ -18,7 +18,7 @@ export default function Sliders({ isMobile }) {
             {[1, 2, 3, 4].map((idx) => (
               <CarouselItemDirective
                 key={idx}
-                template={`'<figure class="img-container"><img src='/src/assets/images/image-product-${idx}.jpg' alt="cardinal" style="height:100%;width:100%;" /></figure>'`}
+                template={`'<figure class="img-container"><img src='/assets/images/image-product-${idx}.jpg' alt="cardinal" style="height:100%;width:100%;" /></figure>'`}
               />
             ))}
             {/* <CarouselItemDirective
