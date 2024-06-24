@@ -53,22 +53,24 @@ export default function Description({ isModal, count, setCount }) {
         </div>
         <span className="text-gray-500 line-through font-bold">$250.00</span>
       </div>
-      <div className="mt-6 flex items-center justify-between bg-slate-200 p-4 rounded-md">
-        <button onClick={decrement}>
-          <img src={iconMenus} alt="" />
-        </button>
-        <p className="font-bold">{count}</p>
-        <button onClick={increment}>
-          <img src={iconPlus} alt="" />
-        </button>
-      </div>
-      <div className="mt-6 pb-10">
-        <button
-          className="flex items-center justify-center gap-4 bg-orange-500 w-full p-4 rounded-md font-bold"
-          onClick={addToCart}>
-          <img src={iconCart} alt="" />
-          Add to cart
-        </button>
+      <div className="lg:flex items-center justify-between lg:mt-6">
+        <div className="mt-6 lg:mt-0 flex items-center justify-between bg-slate-200 p-4 lg:gap-5 rounded-md">
+          <button onClick={decrement}>
+            <img src={iconMenus} alt="" />
+          </button>
+          <p className="font-bold">{count}</p>
+          <button onClick={increment}>
+            <img src={iconPlus} alt="" />
+          </button>
+        </div>
+        <div className="mt-6 pb-10 lg:pb-0 lg:mt-0">
+          <button
+            className="flex items-center justify-center gap-4 bg-orange-500 w-full p-4 rounded-md font-bold"
+            onClick={addToCart}>
+            <img src={iconCart} alt="" />
+            Add to cart
+          </button>
+        </div>
       </div>
 
       <CartModal

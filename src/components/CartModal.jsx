@@ -14,16 +14,20 @@ export default function CartModal({ modal, count, countValue, removeCart }) {
           <div className="border-nav"></div>
           {count > 0 ? (
             <div className="mt-5">
-              <div className="flex justify-between">
-                <img
-                  src={product_1}
-                  alt=""
-                  className="w-[50px] h-[50px] rounded-md"
-                />
+              <div className="flex justify-between items-center gap-1">
                 <div>
-                  <p>Fall Limited Edition Sneakers</p>
-                  <p>$125.00 x {count}</p>
-                  <p>${countValue}</p>
+                  <img
+                    src={product_1}
+                    alt=""
+                    className="w-[50px] h-[50px] rounded-md"
+                  />
+                </div>
+                <div>
+                  <p className="text-gray-500">Fall Limited Edition Sneakers</p>
+                  <div className="flex gap-3">
+                    <p className="text-gray-500">$125.00 x {count}</p>
+                    <p className="font-bold">${countValue}</p>
+                  </div>
                 </div>
                 <div>
                   <button onClick={removeCart}>
