@@ -16,7 +16,9 @@ export default function Nav() {
         <ul>
           {listMenu.map((item, index) => (
             <li key={index} className="inline-block mx-4">
-              <a href="#" className="text-gray-500 hover:text-gray-900">
+              <a
+                href="#"
+                className="text-gray-500 hover:text-gray-900 relative before:absolute before:-bottom-[230%] before:left-0 before:w-0 before:h-0.5 before:bg-orange before:transition-all before:duration-300 hover:before:w-full">
                 {item}
               </a>
             </li>
