@@ -31,9 +31,15 @@ Users should be able to:
 
 ### Screenshot
 
+- Tablet
+
 ![](/public/tablet.png)
 
+- Tablet Menu
+
 ![](/public/tablet-menu.png)
+
+- Desktop
 
 ![](/public/screen-desktop.png)
 
