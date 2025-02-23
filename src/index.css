@@ -6,7 +6,7 @@
   /* fonts */
   --font-kumbh-sans: 'Kumbh Sans', sans-serif;
   /* Primary */
-  --color-orange: hsl(26, 100%, 55%);
+  --color-orange: rgb(255, 125, 26);
   --color-Pale-orange: hsl(25, 100%, 94%);
   /* Neutral */
   --color-very-dark-blue: hsl(220, 13%, 13%);
