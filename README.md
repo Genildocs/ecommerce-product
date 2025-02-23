@@ -45,8 +45,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://github.com/Genildocs/ecommerce-product/tree/main)
-- Live Site URL: [](https://ecommerce-product-six.vercel.app/)
+- Solution URL: ![](https://github.com/Genildocs/ecommerce-product/tree/main)
+- Live Site URL: ![](https://ecommerce-product-six.vercel.app/)
 
 ## My process
 
