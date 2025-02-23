@@ -45,8 +45,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/Genildocs/ecommerce-product/tree/main)
-- Live Site URL: [ecommerce-product](https://ecommerce-product-six.vercel.app/)
+- Solution URL: [[Github](https://github.com/Genildocs/ecommerce-product/tree/main)](https://github.com/Genildocs/ecommerce-product/tree/main)
+- Live Site URL: [[ecommerce-product](https://ecommerce-product-six.vercel.app/)](https://ecommerce-product-six.vercel.app/)
 
 ## My process
 
@@ -82,4 +82,4 @@ Users should be able to:
 
 - Frontend Mentor - [@Genildocs](https://www.frontendmentor.io/profile/Genildocs)
 - Github - [Github](https://github.com/Genildocs)
-- Linkedin - [Linkedin](https://www.linkedin.com/in/genildo-cerqueira-91888786/)
+- Linkedin - [[Linkedin](https://www.linkedin.com/in/genildo-cerqueira-91888786/)](https://www.linkedin.com/in/genildo-cerqueira-91888786/)
