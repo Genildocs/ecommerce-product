@@ -31,6 +31,18 @@ Users should be able to:
 
 ### Screenshot
 
+- Mobile
+
+![](/public/mobile.png)
+
+- Mobile Menu
+
+![](/public/mobile-menu.png)
+
+- Mobile cart
+
+![](/public/mobile-cart.png)
+
 - Tablet
 
 ![](/public/tablet.png)
