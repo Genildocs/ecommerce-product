@@ -70,7 +70,7 @@ export default function Cart({ count, setCount, isValid }) {
         <button
           className={`bg-orange w-full ${
             isValid ? 'flex' : 'hidden'
-          } items-center justify-center p-2 rounded-lg cursor-pointer font-bold`}>
+          } items-center justify-center p-2 rounded-lg cursor-pointer font-bold shadow-(--shadow-Modal)`}>
           Checkout
         </button>
       </motion.div>

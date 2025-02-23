@@ -16,6 +16,16 @@
   /* Gradient */
   --color-very-light-gray: hsl(0, 0%, 100%);
   --color-black: hsl(0, 0%, 0%);
+  --color-backgroundProgress: linear-gradient(
+    135deg,
+    rgba(131, 131, 230, 1) 0%,
+    rgba(131, 131, 230, 1) 8%,
+    rgba(243, 158, 83, 1) 29%,
+    rgba(251, 115, 4, 1) 52%,
+    rgba(245, 119, 15, 1) 70%,
+    rgba(255, 200, 20, 1) 77%,
+    rgba(255, 200, 20, 1) 100%
+  );
   /* box-shadow */
   --shadow-Modal: 0px 3px 9px 0px rgba(0, 0, 0, 0.73);
 }
@@ -45,6 +55,12 @@
 
 @media (max-width: 1024px) {
   .swiper-thumbs {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .swiper-pagination {
     display: none !important;
   }
 }
@@ -83,4 +99,35 @@
   font-weight: bold !important;
   line-height: 0 !important;
 }
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: hsl(54, 94%, 51%);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: hsla(59, 94%, 51%, 0.849);
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
 /*  */

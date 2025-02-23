@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {
   Pagination,
@@ -23,6 +23,13 @@ import 'swiper/css/bundle';
 
 export default function SlidesSwiper() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
+
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty('--progress', 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  };
 
   const imagesSlides = [
     ImageProduct1,
@@ -52,6 +59,7 @@ export default function SlidesSwiper() {
         ]}
         slidesPerView={1}
         pagination={{ clickable: true }}
+        loop={true}
         navigation
         autoplay={{
           delay: 3000,
@@ -59,6 +67,7 @@ export default function SlidesSwiper() {
         }}
         thumbs={{ swiper: thumbsSwiper }}
         effect="fade"
+        onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="md:h-[300px]  md:rounded-lg lg:w-[450px] lg:h-[450px]">
         {/* Loop images */}
         {imagesSlides.map((image, index) => (
@@ -70,6 +79,12 @@ export default function SlidesSwiper() {
             />
           </SwiperSlide>
         ))}
+        <div className="autoplay-progress" slot="container-end">
+          <svg viewBox="0 0 48 48" ref={progressCircle}>
+            <circle cx="24" cy="24" r="20"></circle>
+          </svg>
+          <span ref={progressContent}></span>
+        </div>
       </Swiper>
 
       {/* Thumbs Swiper -> store swiper instance */}

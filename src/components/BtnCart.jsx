@@ -13,7 +13,7 @@ export default function BtnCart({ count, setCount, setIsValid }) {
   return (
     <>
       <div className="btn-add my-3 md:my-0 md:flex-1">
-        <motion.button className="flex items-center justify-between w-full bg-gray-50 p-5 rounded-lg ">
+        <motion.button className="flex items-center justify-between w-full bg-gray-50 p-5 rounded-lg shadow-(--shadow-Modal)">
           <img
             src={IconMinus}
             alt="icon minus"
@@ -25,13 +25,13 @@ export default function BtnCart({ count, setCount, setIsValid }) {
             src={IconPlus}
             alt="icon sum"
             className="cursor-pointer"
-            onClick={() => setCount(count + 1)}
+            onClick={() => setCount((prev) => prev + 1)}
           />
         </motion.button>
       </div>
       <div className="btn-cart md:flex-1">
         <motion.button
-          className=" w-full flex items-center justify-center gap-2 p-5 rounded-lg cursor-pointer "
+          className=" w-full flex items-center justify-center gap-2 p-5 rounded-lg cursor-pointer shadow-(--shadow-Modal)"
           style={{ background: 'rgb(255, 125, 26)' }}
           whileHover={{ background: 'rgb(255, 171, 106)' }}
           onClick={() => setIsValid(count > 0)}>
