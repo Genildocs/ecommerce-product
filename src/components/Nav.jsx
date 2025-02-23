@@ -9,12 +9,14 @@ export default function Nav({ isOpen, setIsOpen }) {
 
   const variantsModal = {
     open: {
-      left: 0,
-      transition: { duration: 0.6 },
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.6, ease: 'easeInOut' },
     },
     close: {
-      left: '-110%',
-      transition: { duration: 0.8 },
+      x: '-110%',
+      opacity: 0,
+      transition: { duration: 0.8, ease: 'easeInOut' },
     },
   };
 
@@ -22,17 +24,23 @@ export default function Nav({ isOpen, setIsOpen }) {
     openOverlay: {
       opacity: 0.7,
       visibility: 'visible',
-      transition: { duration: 0.3 },
+      transition: { duration: 0.3, ease: 'easeOut' },
     },
     closeOverlay: {
       opacity: 0,
       visibility: 'hidden',
+      transition: { duration: 0.3, ease: 'easeIn' },
     },
   };
 
-  const variantsMenu = {
-    active: { opacity: 1, y: 0, visibility: 'visible' },
-    inactive: { opacity: 0, y: -20, visibility: 'hidden' },
+  const listVariants = {
+    closed: {}, // Estado inicial (não precisa de transição aqui)
+    open: { transition: { staggerChildren: 0.2 } }, // Aplica stagger nos filhos
+  };
+
+  const itemVariants = {
+    closed: { opacity: 0, y: 20 }, // Começa invisível e deslocado para baixo
+    open: { opacity: 1, y: 0, transition: { duration: 0.5 } }, // Fica visível e sobe
   };
 
   useEffect(() => {
@@ -72,23 +80,27 @@ export default function Nav({ isOpen, setIsOpen }) {
                 initial="closeOverlay"
                 animate="openOverlay"
                 exit="closeOverlay"
+                key={1000}
               />
               <motion.div
                 variants={variantsModal}
                 initial="close"
                 animate="open"
                 exit="close"
+                key={2000}
                 className="absolute bg-white left-0 top-0  w-[70%] h-screen z-20">
                 <motion.ul
                   className="absolute  left-6 top-[20%] flex flex-col justify-between gap-5 text-black  text-3xl  font-light"
-                  variants={variantsMenu}
-                  initial="inactive"
-                  animate="active">
+                  variants={listVariants}
+                  initial="closed"
+                  animate={isOpen ? 'open' : 'closed'} // Controla os estados
+                >
                   {listMenu.map((item, index) => (
                     <motion.li
                       key={index}
                       whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}>
+                      whileTap={{ scale: 0.9 }}
+                      variants={itemVariants}>
                       <a href="#" className="text-gray-500 hover:text-gray-900">
                         {item}
                       </a>

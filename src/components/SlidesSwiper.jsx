@@ -17,8 +17,7 @@ import ImageProduct1Thumb from '../assets/images/image-product-1-thumbnail.jpg';
 import ImageProduct2Thumb from '../assets/images/image-product-2-thumbnail.jpg';
 import ImageProduct3Thumb from '../assets/images/image-product-3-thumbnail.jpg';
 import ImageProduct4Thumb from '../assets/images/image-product-4-thumbnail.jpg';
-import SlideNextButton from './SlideNextButton.jsx';
-import SlidePrevButton from './SlidePrevButton.jsx';
+
 //Swiper styles
 import 'swiper/css/bundle';
 

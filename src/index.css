@@ -16,6 +16,8 @@
   /* Gradient */
   --color-very-light-gray: hsl(0, 0%, 100%);
   --color-black: hsl(0, 0%, 0%);
+  /* box-shadow */
+  --shadow-Modal: 0px 3px 9px 0px rgba(0, 0, 0, 0.73);
 }
 
 @layer base {

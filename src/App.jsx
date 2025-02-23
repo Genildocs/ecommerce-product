@@ -9,7 +9,6 @@ export default function App() {
   const [count, setCount] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
-  console.log(isOpen);
   return (
     <div className="flex flex-col justify-between min-h-full">
       <Header count={count} isOpen={isOpen} setIsOpen={setIsOpen} />
