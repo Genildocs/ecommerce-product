@@ -33,13 +33,52 @@
   #root {
     @apply h-full;
   }
-
-  .imageSwiper-container {
-    @apply md:w-full md:h-full md:object-cover;
-  }
 }
 
 /*Swipers styles*/
+
 .swiper-pagination-bullet-active {
   background: white !important;
 }
+
+@media (max-width: 1024px) {
+  .swiper-thumbs {
+    display: none !important;
+  }
+}
+
+.swiper-thumbs > .swiper-wrapper > .swiper-slide {
+  width: 120px !important;
+}
+
+.swiper-slide-thumb-active > img {
+  opacity: 0.5 !important;
+  border: 3px solid hsl(26, 100%, 55%) !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: #eeeeeeb9 !important;
+  width: 50px !important;
+  padding: 20px !important;
+  color: white !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: #eeeeee !important;
+    color: black !important;
+  }
+
+  @media (min-width: 768px) {
+    display: none !important;
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 15px !important;
+  font-weight: bold !important;
+  line-height: 0 !important;
+}
+/*  */

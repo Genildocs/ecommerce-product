@@ -15,7 +15,7 @@ export default function TextSectionMain({ children }) {
             the weather can offer.
           </p>
         </div>
-        <div className="price flex items-center justify-between ">
+        <div className="price flex items-center justify-between lg:flex-col lg:items-start lg:gap-2">
           <div className="flex items-center gap-3">
             <span className="font-bold text-3xl">$125.00</span>
             <span className="bg-gray-950 text-white font-bold text-lg rounded-sm py-1 px-2">
