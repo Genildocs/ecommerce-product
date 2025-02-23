@@ -41,7 +41,7 @@ export default function Cart({ count }) {
         </div>
         <div
           className={`${
-            count <= 0 ? 'hidden' : 'flex'
+            count > 0 ? 'hidden' : 'flex'
           } justify-self-start items-center justify-between w-full`}>
           <div>imagem</div>
           <div>texto</div>
