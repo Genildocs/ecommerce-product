@@ -43,10 +43,16 @@ Users should be able to:
 
 ![](/public/screen-desktop.png)
 
+- Cart
+
+![](/public/cart.png)
+
+![](/public/cart2.png)
+
 ### Links
 
-- Solution URL: ![https://github.com/Genildocs/ecommerce-product/tree/main](https://github.com/Genildocs/ecommerce-product/tree/main)
-- Live Site URL: ![https://ecommerce-product-six.vercel.app/](https://ecommerce-product-six.vercel.app/)
+- Solution URL: [https://github.com/Genildocs/ecommerce-product/tree/main](https://github.com/Genildocs/ecommerce-product/tree/main)
+- Live Site URL: [https://ecommerce-product-six.vercel.app/](https://ecommerce-product-six.vercel.app/)
 
 ## My process
 
