@@ -11,6 +11,7 @@ export default function Footer() {
         </span>
       </p>
       <p className="text-center"> © Copyright 2025. All Rights Reserved </p>
+      <p>Code created on 02/24/2025 by genildocs</p>
       {/*<FloatingBox />*/}
     </footer>
   );
